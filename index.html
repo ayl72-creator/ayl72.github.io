@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Andrew Li's professional portfolio featuring finance, research, skills, resume, and selected projects." />
+  <title>Andrew Li | Portfolio</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0f172a;
+      --blue: #2563eb;
+      --light-blue: #eff6ff;
+      --text: #1f2937;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --bg: #f8fafc;
+      --white: #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 64px 20px 54px;
+      text-align: center;
+    }
+
+    .header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header h1 {
+      font-size: 2.7rem;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 1.15rem;
+      color: #cbd5e1;
+      margin-bottom: 24px;
+    }
+
+    .header-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 26px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .button-primary {
+      background: var(--blue);
+      color: var(--white);
+    }
+
+    .button-primary:hover {
+      background: #1d4ed8;
+    }
+
+    .button-secondary {
+      border: 1px solid #64748b;
+      color: var(--white);
+      background: transparent;
+    }
+
+    .button-secondary:hover {
+      background: #1e293b;
+    }
+
+    nav a {
+      color: #e2e8f0;
+      text-decoration: none;
+      margin: 0 11px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 44px 20px 64px;
+    }
+
+    section {
+      margin-bottom: 54px;
+    }
+
+    h2 {
+      color: var(--navy);
+      font-size: 1.9rem;
+      margin-bottom: 18px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+    }
+
+    .statement {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 12px;
+    }
+
+    .skill {
+      background: var(--light-blue);
+      color: #1e3a8a;
+      border: 1px solid #dbeafe;
+      padding: 12px 14px;
+      border-radius: 9px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .resume-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .resume-card p {
+      color: var(--muted);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .project h3 {
+      color: var(--navy);
+      margin-bottom: 10px;
+      font-size: 1.25rem;
+    }
+
+    .project p {
+      margin-bottom: 16px;
+    }
+
+    .tags {
+      margin-bottom: 8px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #eef2ff;
+      color: #3730a3;
+      padding: 5px 9px;
+      border-radius: 999px;
+      margin: 0 6px 8px 0;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .project .button {
+      margin-top: 6px;
+    }
+
+    .contact-line {
+      margin-top: 14px;
+      color: #cbd5e1;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      background: var(--navy);
+      color: #cbd5e1;
+      padding: 24px 20px;
+    }
+
+    @media (max-width: 640px) {
+      header h1 {
+        font-size: 2.15rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-inner">
+
+      <h1>Andrew Li</h1>
+
+      <p class="subtitle">
+        Rutgers Business School Finance Student
+      </p>
+
+      <div class="header-buttons">
+
+        <a
+          class="button button-primary"
+          href="https://drive.google.com/file/d/1pyxImma4eiryQ1Miai5ZZDRbmyYwiuJ4/view?usp=sharing"
+          target="_blank">
+          View Resume
+        </a>
+
+        <a
+          class="button button-secondary"
+          href="mailto:liandrew840@gmail.com">
+          Email Me
+        </a>
+
+      </div>
+
+      <nav>
+        <a href="#statement">Personal Statement</a>
+        <a href="#skills">Skills</a>
+        <a href="#resume">Resume</a>
+        <a href="#projects">Projects</a>
+      </nav>
+
+      <p class="contact-line">
+        liandrew840@gmail.com
+      </p>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- Personal Statement -->
+
+    <section id="statement">
+
+      <h2>Personal Statement</h2>
+
+      <div class="card">
+
+        <p class="statement">
+          I am a Rutgers Business School finance student with venture capital experience in financial analysis, market research, due diligence, and data-driven academic research.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- Skills -->
+
+    <section id="skills">
+
+      <h2>Skills</h2>
+
+      <div class="skills-grid">
+
+        <div class="skill">Financial Statement Analysis</div>
+
+        <div class="skill">Investment Research</div>
+
+        <div class="skill">Market &amp; Industry Research</div>
+
+        <div class="skill">Due Diligence</div>
+
+        <div class="skill">Microsoft Excel</div>
+
+        <div class="skill">Microsoft PowerPoint</div>
+
+        <div class="skill">Microsoft Word</div>
+
+        <div class="skill">Adobe Photoshop</div>
+
+        <div class="skill">Quantitative Analysis</div>
+
+        <div class="skill">Qualitative Research</div>
+
+        <div class="skill">Presentation &amp; Communication</div>
+
+        <div class="skill">Mandarin Chinese</div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Resume -->
+
+    <section id="resume">
+
+      <h2>Resume</h2>
+
+      <div class="card resume-card">
+
+        <div>
+
+          <h3>Andrew Li — Resume</h3>
+
+          <p>
+            Education, experience, projects, technical skills, languages, and certifications.
+          </p>
+
+        </div>
+
+        <a
+          class="button button-primary"
+          href="https://drive.google.com/file/d/1pyxImma4eiryQ1Miai5ZZDRbmyYwiuJ4/view?usp=sharing"
+          target="_blank">
+          Open Resume PDF
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- Projects -->
+
+    <section id="projects">
+
+      <h2>Projects</h2>
+
+      <div class="projects-grid">
+
+
+        <!-- Darknet Project -->
+
+        <article class="card project">
+
+          <h3>
+            The War on Drugs Online: Darknet Takedowns, Market Adaptation, and the Rise of Telegram
+          </h3>
+
+          <p>
+            Original Rutgers research examining how online illicit markets evolved from darknet marketplaces to Telegram, with emphasis on law-enforcement takedowns, platform structure, privacy, market adaptation, and economic incentives. The paper was selected for presentation at the Rutgers Undergraduate Research Writing Conference.
+          </p>
+
+          <div class="tags">
+
+            <span class="tag">Research</span>
+
+            <span class="tag">Technology</span>
+
+            <span class="tag">Market Analysis</span>
+
+            <span class="tag">Writing</span>
+
+          </div>
+
+          <a
+            class="button button-primary"
+            href="https://drive.google.com/file/d/1LRvUA6uoT6FfIKHq_IJIZLt3gJft4nH5/view?usp=sharing"
+            target="_blank">
+            View Project PDF
+          </a>
+
+        </article>
+
+
+        <!-- NFL Project -->
+
+        <article class="card project">
+
+          <h3>
+            An Analysis of NFL Teams' Engagement Strategies with Their Fan Bases on Social Media Platforms
+          </h3>
+
+          <p>
+            Research project analyzing 28,275 NFL Instagram posts to study how teams use social media for community engagement, charitable causes, and social justice. The project used post classification, social-media metrics, and comparative data analysis to identify patterns across NFL teams.
+          </p>
+
+          <div class="tags">
+
+            <span class="tag">Data Analysis</span>
+
+            <span class="tag">Social Media</span>
+
+            <span class="tag">Sports Business</span>
+
+            <span class="tag">Research</span>
+
+          </div>
+
+          <a
+            class="button button-primary"
+            href="https://drive.google.com/file/d/1RW48qfpOENHW85gSLjzZG12Fs6oKyPfk/view?usp=sharing"
+            target="_blank">
+            View Project PDF
+          </a>
+
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <p>
+      Andrew Li | Finance &amp; Research Portfolio
+    </p>
+
+  </footer>
+
+</body>
+</html>
